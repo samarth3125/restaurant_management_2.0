@@ -1,0 +1,97 @@
+body {
+    background: linear-gradient(120deg, #fcb69f 0%, #ffecd2 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Add food images as background stickers */
+    background-image:
+        url('burger-sticker.png'),
+        url('pizza-sticker.png'),
+        url('pasta-sticker.png'),
+        url('salad-sticker.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 120px, 100px, 90px, 80px;
+    background-position:
+        left 40px top 60px,
+        right 60px top 120px,
+        left 60px bottom 80px,
+        right 40px bottom 40px;
+    /* fallback color */
+    background-color: #fcb69f;
+}
+
+.dashboard-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(252,182,159,0.15);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+h2 {
+    color: #ff7e5f;
+    margin-bottom: 2rem;
+}
+
+.dashboard-btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.8rem 0;
+    background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255,126,95,0.10);
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.dashboard-btn:hover {
+    background: linear-gradient(90deg, #feb47b 0%, #ff7e5f 100%);
+    color: #222;
+    transform: scale(1.04);
+}
+
+.logout-btn {
+    background: #fff;
+    color: #ff7e5f;
+    border: 2px solid #ff7e5f;
+    margin-top: 1.5rem;
+}
+
+.logout-btn:hover {
+    background: #ff7e5f;
+    color: #fff;
+}
+
+.back-btn {
+    background: none;
+    color: #ff7e5f;
+    border: none;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    box-shadow: none;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #feb47b;
+}

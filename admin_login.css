@@ -1,0 +1,104 @@
+body {
+    background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    background: #fff;
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 2rem 2.5rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(252,182,159,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+h2 {
+    color: #ff7e5f;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border: 1.5px solid #feb47b;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.2s;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border: 2px solid #ff7e5f;
+}
+
+.login-btn, .show-btn, .back-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.login-btn {
+    background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255,126,95,0.10);
+}
+
+.login-btn:hover {
+    background: linear-gradient(90deg, #feb47b 0%, #ff7e5f 100%);
+    transform: scale(1.04);
+}
+
+.show-btn {
+    background: #fff;
+    color: #ff7e5f;
+    border: 1.5px solid #ff7e5f;
+    margin-left: 10px;
+}
+
+.show-btn:hover {
+    background: #ff7e5f;
+    color: #fff;
+}
+
+.back-btn {
+    background: none;
+    color: #ff7e5f;
+    text-decoration: none;
+    border: none;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #feb47b;
+}
+
+.alert-box {
+    display: none;
+    background: #ff7e5f;
+    color: #fff;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}

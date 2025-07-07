@@ -1,4 +1,4 @@
-			<?php
+<?php
 session_start();
 include 'db_connect.php';
 
@@ -14,15 +14,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: admin.php");
         exit();
     } else {
-        echo "<script>alert('Invalid credentials');</script>";
+        echo "<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const alertBox = document.getElementById('alertBox');
+                alertBox.style.display = 'block';
+                setTimeout(() => { alertBox.style.opacity = 0; }, 2000);
+            });
+        </script>";
     }
 }
 ?>
 
-<form method="post">
-<a href="index.html">back</a>
+<link rel="stylesheet" href="admin_login.css">
+<script src="admin_login.js" defer></script>
+
+<div class="login-container">
+    <a href="index.html" class="back-btn">← Back</a>
     <h2>Admin Login</h2>
-    <input type="text" name="username" placeholder="Username" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-</form>
+    <div id="alertBox" class="alert-box">Invalid credentials</div>
+    <form method="post" id="loginForm">
+        <input type="text" name="username" id="username" placeholder="Username" required autocomplete="off">
+        <input type="password" name="password" id="password" placeholder="Password" required autocomplete="off">
+        <button type="submit" class="login-btn">Login</button>
+        <button type="button" class="show-btn" id="showPassBtn">Show Password</button>
+    </form>
+</div>
