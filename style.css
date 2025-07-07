@@ -1,0 +1,89 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.home-btn {
+    position: absolute; /* Use absolute instead of fixed if needed */
+    top: 10px;  /* Adjust as per your layout */
+    left: 10px; /* Adjust as per your layout */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent for glass effect */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+    z-index: 1000; /* Ensures it stays on top */
+}
+
+.home-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.order-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.order-box:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.order-btn {
+    background: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #ff1a1a;
+    transform: scale(1.1);
+}
